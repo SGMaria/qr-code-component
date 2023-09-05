@@ -32,7 +32,11 @@ makeCode();
     }
   });
 
-  const qr = new QRCode(document.getElementById("qrcode"));
+  const qr = new QRCode(document.getElementById("qrcode"), {
+    colorDark : "#FFFFFF",
+    colorLight : "#00B9E8",
+    correctLevel : QRCode.CorrectLevel.H
+});
   function getLink(){
     let link = document.getElementById("qrlink").value;
     generateQR(link);

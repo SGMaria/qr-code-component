@@ -6,16 +6,23 @@
     <title>Frontend Mentor | QR code component</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;400;500;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
   </head>
   <body>
 
-    <div>
-      <input id="qrlink" placeholder="Write a link here...">
-      <button id="qrlinkbutton">OK</button>
-    </div>
+    <div id="container">
     
-    <div id="qrcode">
+      <div id="qrcode"></div>
+
+      <div id="divLink">
+        <input id="qrlink" placeholder="Write a link here...">
+        <button id="qrlinkbutton">Get QR</button>
+      </div>
+
     </div>
+
     <script src="utility/QRCode/qrcode.min.js"></script>
     <script src="app/aqrGenerator.js"></script>
   </body>
