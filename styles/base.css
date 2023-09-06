@@ -82,6 +82,50 @@ button:hover {
     margin: auto;
 }
 
+#footer {
+    height: 0px;
+    width: auto;
+    display: block;
+}
+  
+#divmsg {
+    font-size: 1rem;
+    text-align: center;
+}
 
+p:first-child{
+    font-size: 1.4rem;
+    font-weight: 700;
+}
 
+@media only screen and (max-width: 460px) {
 
+    #container {
+        min-width: 250px;
+    }
+
+    #qrcode img {
+        width: 150px;
+        height: 150px;
+    }
+
+}
+
+@media only screen and (orientation: landscape) {
+
+    #container {
+        position: relative;
+        top: 50px;
+        left: 0;
+        transform: none;
+        margin-bottom: 50px;;
+    }
+
+    #footer {
+        height: 50px;
+        width: auto;
+        margin-top: auto;
+        position: bottom;
+    }
+
+  }

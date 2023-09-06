@@ -11,6 +11,7 @@
     let color2 = document.getElementById("qrColor2").value;
     qr._htOption.colorDark = color1;
     qr._htOption.colorLight = color2;
+    document.getElementById("qrcode").children[1].style.backgroundColor = color2;
   }
 
   function getLink(){
