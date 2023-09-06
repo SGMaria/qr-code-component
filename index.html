@@ -13,12 +13,28 @@
   <body>
 
     <div id="container">
-    
+      
       <div id="qrcode"></div>
 
+      <div id="divmsg"> 
+        <p>Create your own QR code!</p>
+        <p>Select the colors you want, and place your link below!</p>
+      </div>
+
       <div id="divLink">
-        <input id="qrlink" placeholder="Write a link here...">
-        <button id="qrlinkbutton">Get QR</button>
+        <input id="qrlink" type="url" placeholder="Write a link here...">
+        <button id="qrlinkbutton" type="button">Get QR</button>
+      </div>
+
+      <div>
+          <label for="qrColor1">Color 1: </label>
+          <input id="qrColor1" type="color" value="#FFFFFF">
+          <label for="qrColor2">Color 2: </label>
+          <input id="qrColor2" type="color" value="#00B9E8">
+      </div>
+
+      <div>
+        <button id="qrdownload" type="button">Download QR Code</button>
       </div>
 
     </div>

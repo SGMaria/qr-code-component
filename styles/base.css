@@ -2,6 +2,7 @@ body {
     background-color: #DAEAF3;
     font-family: 'Outfit', sans-serif;
     font-size: 12px;
+    box-sizing: border-box;
 }
 
 #container {
