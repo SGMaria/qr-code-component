@@ -42,8 +42,7 @@ body {
     padding: 4px 0;
 }
 
-#qrlinkbutton {
-    width: 25%;
+button {
     font-size: 1rem;
     font-weight: 400;
     padding: 4px 0;
@@ -51,13 +50,38 @@ body {
     border: 2px #00B9E8 solid;
 }
 
-#qrlink:hover {
-   
-    border: 3px #00B9E8 solid;
+#qrlinkbutton {
+    width: 25%;
 }
 
-#qrlinkbutton:hover {
+#qrdownload {
+    width: 50%;
+    display: block;
+    width: 200px;
+    margin: auto;
+}
+
+button:hover {
+    border: 3px #00B9E8 solid;
     background-color: #00B9E8;
     border: 2px #F6FCFF solid;
     color: #F6FCFF;
 }
+
+#selectColors {
+    margin: 15px auto;
+    justify-content: space-evenly;
+    display: flex;
+    font-size: 1rem;
+}
+
+#selectColors input{
+    width: 70px;
+    height: 25px;
+    padding: 1px;
+    margin: auto;
+}
+
+
+
+
