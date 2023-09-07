@@ -1,4 +1,13 @@
-  /* Creates the QR code. Has default values*/
+  function valitadeLink(link){
+    try {
+      new URL(link);
+      return true;
+    } catch (err) {
+      return false;
+    }
+  }
+
+/* Creates the QR code. Has default values*/
   var qr = new QRCode(document.getElementById("qrcode"), {
     colorDark : "#FFFFFF",
     colorLight : "#00B9E8",
@@ -21,13 +30,22 @@
   }
 
   /* Generates the QR code */
-  function generateQR(link){
+  function generateQR(link = "https://google.com"){
+
     let defaultLink = "https://google.com";
-    if (!link){
-        link = defaultLink;
+    document.getElementById("qrlink").value = link;
+    /* Validating if url is correct or not. If not, going to default config. */
+    if (!valitadeLink(link)){
+      document.getElementById("errormsg").textContent = "Unvalid or empty link.";
+      setTimeout(function (){
+        document.getElementById("errormsg").textContent = "";
         document.getElementById("qrlink").value = defaultLink;
-    } 
-    qr.makeCode(link)
+        qr.makeCode(defaultLink)
+      }, 3000);
+    } else{
+      qr.makeCode(link);
+    }
+
   }
 
   /* Gets the src of the qr img and starts the download of said img */
@@ -65,6 +83,6 @@
   /* Calls */
   const qrlinkbutton = document.getElementById("qrlinkbutton");
   qrlinkbutton.addEventListener("click", getLink);
-  document.addEventListener("load", generateQR(""));
+  document.addEventListener("load", generateQR());
   const qrdownloadbutton = document.getElementById("qrdownload");
   qrdownloadbutton.addEventListener("click", getQRImg);

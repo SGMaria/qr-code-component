@@ -3,47 +3,58 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Frontend Mentor | QR code component</title>
+    <title>QR Code Component</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <!--Stylesheets-->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;400;500;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!--Imported fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;400;500;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
   </head>
   <body>
 
-    <div id="container">
-      
-      <div id="qrcode"></div>
-
-      <div id="divmsg"> 
-        <p>Create your own QR code!</p>
-        <p>Select the colors you want, and place your link below!</p>
-      </div>
-
-      <div id="divLink">
-        <input id="qrlink" type="url" placeholder="Write a link here...">
-        <button id="qrlinkbutton" type="button">Get QR</button>
-      </div>
-
-      <div id="selectColors">
-        <div>
-          <label for="qrColor1">Color 1: </label>
-          <input id="qrColor1" type="color" value="#FFFFFF">
+    <main>
+      <div id="container">
+        <!--Where the QR Code will be-->
+        <div id="qrcode"></div>
+        <!--Title and menssage-->
+        <div id="divmsg"> 
+          <p>Create your own QR code!</p>
+          <p>Select the colors you want, and place your link and click Get QR then Download QR Code!</p>
         </div>
-        <div>
-          <label for="qrColor2">Color 2: </label>
-          <input id="qrColor2" type="color" value="#00B9E8">
+        <!--Link and button-->
+        <div id="divLink">
+          <input id="qrlink" type="url" placeholder="Write a link here..." required>
+          <button id="qrlinkbutton" type="button">Get QR</button>
         </div>
+        <!--For invalid url-->
+        <div>
+          <p id="errormsg"></p>
+        </div>
+        <!--Colors to use-->
+        <div id="selectColors">
+          <div>
+            <label for="qrColor1">Color 1: </label>
+            <input id="qrColor1" type="color" value="#FFFFFF">
+          </div>
+          <div>
+            <label for="qrColor2">Color 2: </label>
+            <input id="qrColor2" type="color" value="#00B9E8">
+          </div>
+        </div>
+        <!--Button to download the QR Code image-->
+        <div>
+          <button id="qrdownload" type="button">Download QR Code</button>
+        </div>
+
       </div>
+    </main>
 
-      <div>
-        <button id="qrdownload" type="button">Download QR Code</button>
-      </div>
-
-    </div>
-
-    <div id="footer"></div>
+    <footer>
+      <!--To add an end space-->
+      <div id="footer"></div>
+    </footer>
 
     <script src="utility/QRCode/qrcode.min.js"></script>
     <script src="app/aqrGenerator.js"></script>
