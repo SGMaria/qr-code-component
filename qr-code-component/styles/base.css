@@ -1,0 +1,139 @@
+body {
+    background-color: #DAEAF3;
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+#container {
+    margin: auto;
+    background-color: #F6FCFF;
+    min-width: 350px;
+    max-width: 400px;
+    width: fit-content;
+    padding: 25px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#qrcode img {
+    background-color: #00B9E8;
+    margin: auto;
+    position: relative;
+    padding: 50px;
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+}
+
+#divLink {
+    margin-top: 20px;
+    width: auto;
+    justify-content: space-between;
+    display: flex;
+}
+
+#qrlink {
+    width: 70%;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 4px 0;
+}
+#errormsg{
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin: 10px auto;
+    color: red;
+}
+
+button {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 4px 0;
+    border-radius: 15px;
+    border: 2px #00B9E8 solid;
+}
+
+#qrlinkbutton {
+    width: 25%;
+}
+
+#qrdownload {
+    width: 50%;
+    display: block;
+    width: 200px;
+    margin: auto;
+}
+
+button:hover {
+    border: 3px #00B9E8 solid;
+    background-color: #00B9E8;
+    border: 2px #F6FCFF solid;
+    color: #F6FCFF;
+}
+
+#selectColors {
+    margin: 15px auto;
+    justify-content: space-evenly;
+    display: flex;
+    font-size: 1rem;
+}
+
+#selectColors input{
+    width: 70px;
+    height: 25px;
+    padding: 1px;
+    margin: auto;
+}
+
+#footer {
+    height: 0px;
+    width: auto;
+    display: block;
+}
+  
+#divmsg {
+    font-size: 1rem;
+    text-align: center;
+}
+
+p:first-child{
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 460px) {
+
+    #container {
+        min-width: 250px;
+    }
+
+    #qrcode img {
+        width: 150px;
+        height: 150px;
+    }
+
+}
+
+@media only screen and (orientation: landscape) {
+
+    #container {
+        position: relative;
+        top: 50px;
+        left: 0;
+        transform: none;
+        margin-bottom: 50px;;
+    }
+
+    #footer {
+        height: 50px;
+        width: auto;
+        margin-top: auto;
+        position: bottom;
+    }
+
+  }
